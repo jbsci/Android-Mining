@@ -1,7 +1,7 @@
 #!/bin/sh
 sudo apt-get -y update
 sudo apt-get -y upgrade
-sudo apt-get -y install libcurl4-openssl-dev libjansson-dev libomp-dev git screen nano jq wget
+sudo apt-get -y install libcurl4-openssl-dev libjansson-dev libomp-dev git screen nano jq wget vim tmux
 wget http://ports.ubuntu.com/pool/main/o/openssl/libssl1.1_1.1.0g-2ubuntu4_arm64.deb
 sudo dpkg -i libssl1.1_1.1.0g-2ubuntu4_arm64.deb
 rm libssl1.1_1.1.0g-2ubuntu4_arm64.deb
@@ -10,7 +10,7 @@ then
   mkdir ~/.ssh
   chmod 0700 ~/.ssh
   cat << EOF > ~/.ssh/authorized_keys
-  ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAII23jzqZQ6i0hHKYDmvxXseHjPxHzIeGFlBBD1Wa8ve8 jbnix
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAII23jzqZQ6i0hHKYDmvxXseHjPxHzIeGFlBBD1Wa8ve8 jbnix
 EOF
   chmod 0600 ~/.ssh/authorized_keys
 fi
